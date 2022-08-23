@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * Samuel Garcia
+ * CECS 475 - Lab 1
+ * 8/23/2022
+ */
+
+using System;
 
 namespace Calculator
 {
