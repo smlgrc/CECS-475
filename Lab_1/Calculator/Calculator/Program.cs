@@ -1,7 +1,7 @@
 ﻿/*
  * Samuel Garcia
  * CECS 475 - Lab 1
- * 8/23/2022
+ * 8/23/22
  */
 
 using System;
