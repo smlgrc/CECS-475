@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "9taoxyJLAn53osHfdQVYENVELXJ1PjXiqd5gexAdy0sbj+APTE1t9QF7FJdQltkpctAhKy978OkKRbm1DwLGFw==",
+  "dgSpecHash": "5KLtKuEXUq2PJsA3UYwBJ+OXFcjHXqyZ6zSeW2q2OL9XnJpVPeGZtCxGVntQ5mtQ7f36/tQO9dWrIfgOFHueXg==",
   "success": true,
   "projectFilePath": "C:\\Users\\samga\\Documents\\GitHub\\CECS-475\\Lab_1\\Calculator\\Calculator\\Calculator.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\samga\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
