@@ -36,8 +36,8 @@ namespace Stock
         /// <param name="stock">Stock object</param>
         public void AddStock(Stock stock)
         {
-            //stocks._____________________________
-        //stock.____________________________________
+            stocks.Add(stock);
+            stocks.StockEvent += EventHandler;
         }
         //---------------------------------------------------------------------------------------
         /// <summary>
@@ -49,23 +49,26 @@ namespace Stock
         {
             try
             { //LOCK Mechanism
-                // ______________________________
+                //outside the try??
+                myLock.EnterWriteLock();
                 Stock newStock = (Stock)sender;
                 //string statement;
                 //!NOTE!: Check out C#events, pg.4
                 // Display the output to the console windows 
-                Console.WriteLine(BrokerName.PadRight(16));
-                //______________________________________________);
+                Console.WriteLine(BrokerName.PadRight(10)+newStock.StockName.PadRight(15)+newStock.CurrentValue.ToString().PadRight(10)+newStock.NumChanges.ToString().PadRight(10));
                 //Display the output to the file
-                //using (StreamWriter outputFile = ________________________________________________)
-                //{
-                //    //________________________________________________
-                //}
+                string lines = DateTime.Now.ToString().PadRight(30) + newStock.StockName.PadRight(15) + newStock.CurrentValue.ToString().PadRight(15) + newStock.NumChanges.ToString();
+                using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath,true)))
+                {
+                    foreach(string line in lines)
+                        outputFile.WriteLine(line);
+                }
                 //RELEASE the lock
                 //____________________
             }
             finally
             {
+                myLock.ExitWriteLock();
             }
         }
         //---------------------------------------------------------------------------------------
