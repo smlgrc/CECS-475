@@ -54,7 +54,7 @@ namespace Stock
                 //string statement;
                 //!NOTE!: Check out C#events, pg.4
                 // Display the output to the console windows 
-                Console.WriteLine(BrokerName.PadRight(16)
+                Console.WriteLine(BrokerName.PadRight(16));
                 //______________________________________________);
                 //Display the output to the file
                 //using (StreamWriter outputFile = ________________________________________________)
