@@ -62,10 +62,9 @@ namespace Stock
         }
         //--------------------------------------------------------------------------------------
         // delegate
-        //public delegate void StockNotification(String stockName, int currentValue, int
-        //numberChanges);
+        public delegate void StockNotification(String stockName, int currentValue, int numberChanges);
         // event
-        //public event StockNotification ProcessComplete;
+        public event StockNotification ProcessComplete;
         //-------------------------------------------------------------------------------
 
         /// <summary>
@@ -77,7 +76,8 @@ namespace Stock
             CurrentValue += rand.Next(1, MaxChange);
             NumChanges++;
             if ((CurrentValue - InitialValue) > Threshold)
-            { //RAISE THE EVENT
+            { 
+              //RAISE THE EVENT
               if (StockEvent != null)
                 {
                     StockEvent.Invoke(this, new StockNotification(StockName, CurrentValue, NumChanges));
