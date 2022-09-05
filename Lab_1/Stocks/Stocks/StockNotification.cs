@@ -18,7 +18,7 @@ namespace Stock
         public StockNotification(string stockName, int currentValue, int numChanges)
         {
             // !NOTE!: Fill in below of what the notification will do using the comments above
-        this.StockName = stockName;
+            this.StockName = stockName;
             this.CurrentValue = currentValue;
             this.NumChanges = numChanges;
         }

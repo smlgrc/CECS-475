@@ -17,8 +17,8 @@ namespace Stock
         public string BrokerName { get; set; }
         public List<Stock> stocks = new List<Stock>();
         public static ReaderWriterLockSlim myLock = new ReaderWriterLockSlim();
-        //readonly string docPath = @"C:\Users\Documents\CECS 475\Lab3_output.txt";
-        readonly string destPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Lab1_output.txt");
+        readonly string docPath = @"C:\Users\samga\Documents\School\CECS 475\Labs\Lab 1\Lab1_output.txt";
+        //readonly string destPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Lab1_output.txt");
         public string titles = "Broker".PadRight(10) + "Stock".PadRight(15) + "Value".PadRight(10) + "Changes".PadRight(10) + "Date and Time";
         //---------------------------------------------------------------------------------------
         /// <summary>
@@ -37,7 +37,7 @@ namespace Stock
         public void AddStock(Stock stock)
         {
             stocks.Add(stock);
-            stocks.StockEvent += EventHandler;
+            stock.StockEvent += EventHandler;
         }
         //---------------------------------------------------------------------------------------
         /// <summary>
@@ -58,13 +58,11 @@ namespace Stock
                 Console.WriteLine(BrokerName.PadRight(10)+newStock.StockName.PadRight(15)+newStock.CurrentValue.ToString().PadRight(10)+newStock.NumChanges.ToString().PadRight(10));
                 //Display the output to the file
                 string lines = DateTime.Now.ToString().PadRight(30) + newStock.StockName.PadRight(15) + newStock.CurrentValue.ToString().PadRight(15) + newStock.NumChanges.ToString();
-                using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath,true)))
+                using (StreamWriter outputFile = new StreamWriter(docPath, true))
                 {
-                    foreach(string line in lines)
-                        outputFile.WriteLine(line);
+                    outputFile.WriteLine(lines);
                 }
-                //RELEASE the lock
-                //____________________
+            //RELEASE the lock
             }
             finally
             {
