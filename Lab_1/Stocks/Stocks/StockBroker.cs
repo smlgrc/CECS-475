@@ -12,14 +12,17 @@ namespace Stock
     // outputs
     // to the console the name, value, and the number of changes of the stock whose
     // value is out of the range given the stock's notification threshold.
- public class StockBroker
+    public class StockBroker
     {
         public string BrokerName { get; set; }
         public List<Stock> stocks = new List<Stock>();
         public static ReaderWriterLockSlim myLock = new ReaderWriterLockSlim();
-        readonly string docPath = @"C:\Users\samga\Documents\School\CECS 475\Labs\Lab 1\Lab1_output.txt";
+        readonly string docPath = @"C:\Users\cliao\source\repos\test1\Stock\Lab1_output.txt";
         //readonly string destPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Lab1_output.txt");
         public string titles = "Broker".PadRight(10) + "Stock".PadRight(15) + "Value".PadRight(10) + "Changes".PadRight(10) + "Date and Time";
+        
+        
+        
         //---------------------------------------------------------------------------------------
         /// <summary>
         /// The stockbroker object
@@ -29,6 +32,9 @@ namespace Stock
         {
             BrokerName = brokerName;
         }
+        
+        
+        
         //---------------------------------------------------------------------------------------
         /// <summary>
         /// Adds stock objects to the stock list
@@ -39,6 +45,9 @@ namespace Stock
             stocks.Add(stock);
             stock.StockEvent += EventHandler; // subscribing to event
         }
+        
+        
+        
         //---------------------------------------------------------------------------------------
         /// <summary>
         /// The eventhandler that raises the event of a change
@@ -55,14 +64,14 @@ namespace Stock
                 //string statement;
                 //!NOTE!: Check out C#events, pg.4
                 // Display the output to the console windows 
-                Console.WriteLine(BrokerName.PadRight(10)+newStock.StockName.PadRight(15)+newStock.CurrentValue.ToString().PadRight(10)+newStock.NumChanges.ToString().PadRight(10));
+                Console.WriteLine(BrokerName.PadRight(10) + newStock.StockName.PadRight(15) + newStock.CurrentValue.ToString().PadRight(10) + newStock.NumChanges.ToString().PadRight(10) + DateTime.Now.ToString().PadRight(30));
                 //Display the output to the file
                 string lines = BrokerName.ToString().PadRight(10) + newStock.StockName.PadRight(15) + newStock.CurrentValue.ToString().PadRight(10) + newStock.NumChanges.ToString().PadRight(10) + DateTime.Now.ToString().PadRight(30);
                 using (StreamWriter outputFile = new StreamWriter(docPath, true))
                 {
                     outputFile.WriteLine(lines);
                 }
-            //RELEASE the lock
+                //RELEASE the lock
             }
             finally
             {
