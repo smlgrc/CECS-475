@@ -57,7 +57,7 @@ namespace Stock
                 // Display the output to the console windows 
                 Console.WriteLine(BrokerName.PadRight(10)+newStock.StockName.PadRight(15)+newStock.CurrentValue.ToString().PadRight(10)+newStock.NumChanges.ToString().PadRight(10));
                 //Display the output to the file
-                string lines = DateTime.Now.ToString().PadRight(30) + newStock.StockName.PadRight(15) + newStock.CurrentValue.ToString().PadRight(15) + newStock.NumChanges.ToString();
+                string lines = BrokerName.ToString().PadRight(10) + newStock.StockName.PadRight(15) + newStock.CurrentValue.ToString().PadRight(10) + newStock.NumChanges.ToString().PadRight(10) + DateTime.Now.ToString().PadRight(30);
                 using (StreamWriter outputFile = new StreamWriter(docPath, true))
                 {
                     outputFile.WriteLine(lines);
