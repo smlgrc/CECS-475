@@ -37,7 +37,7 @@ namespace Stock
         public void AddStock(Stock stock)
         {
             stocks.Add(stock);
-            stock.StockEvent += EventHandler;
+            stock.StockEvent += EventHandler; // subscribing to event
         }
         //---------------------------------------------------------------------------------------
         /// <summary>

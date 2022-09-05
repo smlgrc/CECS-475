@@ -82,7 +82,6 @@ namespace Stock
                 {
                     //ProcessComplete += new StockNotification(StockName, CurrentValue, NumChanges);       
                     //StockEvent.Invoke(this, ProcessComplete); // probably not right lol
-                    //StockEvent.Invoke(this, new StockNotification(StockName, CurrentValue, NumChanges));
 
                     StockEvent.Invoke(this, new StockNotification(StockName, CurrentValue, NumChanges));
                 }
