@@ -9,7 +9,9 @@ namespace Stock
         static void Main(string[] args)
         {
             //prints titles to the console and file destination
-            string docPath = @"C:\Users\cliao\source\repos\test1\Stock\Lab1_output.txt";
+            //string docPath = @"C:\Users\cliao\source\repos\test1\Stock\Lab1_output.txt";
+            //string docPath = @"C:\Users\samga\Documents\School\CECS 475\Labs\Lab 1\Lab1_output.txt";
+            string docPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Lab1_output.txt");
             string titles = "Broker".PadRight(10) + "Stock".PadRight(15) + "Value".PadRight(10) + "Changes".PadRight(10) + "Date and Time";
             using (FileStream fs = File.Create(docPath)) { }   
             Console.WriteLine(titles);

@@ -17,8 +17,9 @@ namespace Stock
         public string BrokerName { get; set; }
         public List<Stock> stocks = new List<Stock>();
         public static ReaderWriterLockSlim myLock = new ReaderWriterLockSlim();
-        readonly string docPath = @"C:\Users\cliao\source\repos\test1\Stock\Lab1_output.txt";
-        //readonly string destPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Lab1_output.txt");
+        //readonly string docPath = @"C:\Users\cliao\source\repos\test1\Stock\Lab1_output.txt";
+        //readonly string docPath = @"C:\Users\samga\Documents\School\CECS 475\Labs\Lab 1\Lab1_output.txt";
+        readonly string docPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Lab1_output.txt");
         public string titles = "Broker".PadRight(10) + "Stock".PadRight(15) + "Value".PadRight(10) + "Changes".PadRight(10) + "Date and Time";
         
         
