@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\samga\\Documents\\GitHub\\CECS-475\\Lab_1\\Stocks\\Stocks\\Stocks.csproj": {}
+    "C:\\Users\\samga\\Documents\\GitHub\\CECS-475\\Lab_2\\Stocks-Async\\Stocks\\Stocks.csproj": {}
   },
   "projects": {
-    "C:\\Users\\samga\\Documents\\GitHub\\CECS-475\\Lab_1\\Stocks\\Stocks\\Stocks.csproj": {
+    "C:\\Users\\samga\\Documents\\GitHub\\CECS-475\\Lab_2\\Stocks-Async\\Stocks\\Stocks.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\samga\\Documents\\GitHub\\CECS-475\\Lab_1\\Stocks\\Stocks\\Stocks.csproj",
+        "projectUniqueName": "C:\\Users\\samga\\Documents\\GitHub\\CECS-475\\Lab_2\\Stocks-Async\\Stocks\\Stocks.csproj",
         "projectName": "Stocks",
-        "projectPath": "C:\\Users\\samga\\Documents\\GitHub\\CECS-475\\Lab_1\\Stocks\\Stocks\\Stocks.csproj",
+        "projectPath": "C:\\Users\\samga\\Documents\\GitHub\\CECS-475\\Lab_2\\Stocks-Async\\Stocks\\Stocks.csproj",
         "packagesPath": "C:\\Users\\samga\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\samga\\Documents\\GitHub\\CECS-475\\Lab_1\\Stocks\\Stocks\\obj\\",
+        "outputPath": "C:\\Users\\samga\\Documents\\GitHub\\CECS-475\\Lab_2\\Stocks-Async\\Stocks\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

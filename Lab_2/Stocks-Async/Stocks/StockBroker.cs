@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace Stock
 {
@@ -41,7 +42,7 @@ namespace Stock
         /// Adds stock objects to the stock list
         /// </summary>
         /// <param name="stock">Stock object</param>
-        public void AddStock(Stock stock)
+        public async Task AddStock(Stock stock)
         {
             stocks.Add(stock);
             stock.StockEvent += EventHandler; // subscribing to event

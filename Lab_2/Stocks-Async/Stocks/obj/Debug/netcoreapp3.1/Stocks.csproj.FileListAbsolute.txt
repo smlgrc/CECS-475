@@ -12,3 +12,17 @@ C:\Users\samga\Documents\GitHub\CECS-475\Lab_1\Stocks\Stocks\bin\Debug\netcoreap
 C:\Users\samga\Documents\GitHub\CECS-475\Lab_1\Stocks\Stocks\obj\Debug\netcoreapp3.1\Stocks.dll
 C:\Users\samga\Documents\GitHub\CECS-475\Lab_1\Stocks\Stocks\obj\Debug\netcoreapp3.1\Stocks.pdb
 C:\Users\samga\Documents\GitHub\CECS-475\Lab_1\Stocks\Stocks\obj\Debug\netcoreapp3.1\Stocks.genruntimeconfig.cache
+C:\Users\samga\Documents\GitHub\CECS-475\Lab_2\Stocks-Async\Stocks\bin\Debug\netcoreapp3.1\Stocks.exe
+C:\Users\samga\Documents\GitHub\CECS-475\Lab_2\Stocks-Async\Stocks\bin\Debug\netcoreapp3.1\Stocks.deps.json
+C:\Users\samga\Documents\GitHub\CECS-475\Lab_2\Stocks-Async\Stocks\bin\Debug\netcoreapp3.1\Stocks.runtimeconfig.json
+C:\Users\samga\Documents\GitHub\CECS-475\Lab_2\Stocks-Async\Stocks\bin\Debug\netcoreapp3.1\Stocks.runtimeconfig.dev.json
+C:\Users\samga\Documents\GitHub\CECS-475\Lab_2\Stocks-Async\Stocks\bin\Debug\netcoreapp3.1\Stocks.dll
+C:\Users\samga\Documents\GitHub\CECS-475\Lab_2\Stocks-Async\Stocks\bin\Debug\netcoreapp3.1\Stocks.pdb
+C:\Users\samga\Documents\GitHub\CECS-475\Lab_2\Stocks-Async\Stocks\obj\Debug\netcoreapp3.1\Stocks.csproj.AssemblyReference.cache
+C:\Users\samga\Documents\GitHub\CECS-475\Lab_2\Stocks-Async\Stocks\obj\Debug\netcoreapp3.1\Stocks.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samga\Documents\GitHub\CECS-475\Lab_2\Stocks-Async\Stocks\obj\Debug\netcoreapp3.1\Stocks.AssemblyInfoInputs.cache
+C:\Users\samga\Documents\GitHub\CECS-475\Lab_2\Stocks-Async\Stocks\obj\Debug\netcoreapp3.1\Stocks.AssemblyInfo.cs
+C:\Users\samga\Documents\GitHub\CECS-475\Lab_2\Stocks-Async\Stocks\obj\Debug\netcoreapp3.1\Stocks.csproj.CoreCompileInputs.cache
+C:\Users\samga\Documents\GitHub\CECS-475\Lab_2\Stocks-Async\Stocks\obj\Debug\netcoreapp3.1\Stocks.dll
+C:\Users\samga\Documents\GitHub\CECS-475\Lab_2\Stocks-Async\Stocks\obj\Debug\netcoreapp3.1\Stocks.pdb
+C:\Users\samga\Documents\GitHub\CECS-475\Lab_2\Stocks-Async\Stocks\obj\Debug\netcoreapp3.1\Stocks.genruntimeconfig.cache
