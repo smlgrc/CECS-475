@@ -11,10 +11,10 @@ using System.Xml.Linq;
 namespace FlickrViewer
 {
    public partial class FlickrViewerForm : Form
-   {
+    {
       // Use your Flickr API key here--you can get one at:
       // http://www.flickr.com/services/apps/create/apply
-       private const string KEY = "f9fcedefed1c9bfa51b4d6d50bb8cd42";
+      private const string KEY = "70c71a4cf429bcb1f73f7baf04f65afc";  // my own key
 
       // object used to invoke Flickr web service
       private WebClient flickrClient = new WebClient();

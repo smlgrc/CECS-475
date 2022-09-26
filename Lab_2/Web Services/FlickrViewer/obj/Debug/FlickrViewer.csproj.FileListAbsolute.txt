@@ -93,3 +93,13 @@ C:\Users\Huy\Documents\GitHub\CECS-475\Lab_2\Web Services\FlickrViewer\obj\Debug
 C:\Users\Huy\Documents\GitHub\CECS-475\Lab_2\Web Services\FlickrViewer\obj\Debug\FlickrViewer.csproj.CoreCompileInputs.cache
 C:\Users\Huy\Documents\GitHub\CECS-475\Lab_2\Web Services\FlickrViewer\obj\Debug\FlickrViewer.exe
 C:\Users\Huy\Documents\GitHub\CECS-475\Lab_2\Web Services\FlickrViewer\obj\Debug\FlickrViewer.pdb
+C:\Users\samga\Documents\GitHub\CECS-475\Lab_2\Web Services\FlickrViewer\bin\Debug\FlickrViewer.exe.config
+C:\Users\samga\Documents\GitHub\CECS-475\Lab_2\Web Services\FlickrViewer\bin\Debug\FlickrViewer.exe
+C:\Users\samga\Documents\GitHub\CECS-475\Lab_2\Web Services\FlickrViewer\bin\Debug\FlickrViewer.pdb
+C:\Users\samga\Documents\GitHub\CECS-475\Lab_2\Web Services\FlickrViewer\obj\Debug\FlickrViewer.csproj.AssemblyReference.cache
+C:\Users\samga\Documents\GitHub\CECS-475\Lab_2\Web Services\FlickrViewer\obj\Debug\FlickrViewer.FlickrViewerForm.resources
+C:\Users\samga\Documents\GitHub\CECS-475\Lab_2\Web Services\FlickrViewer\obj\Debug\FlickrViewer.Properties.Resources.resources
+C:\Users\samga\Documents\GitHub\CECS-475\Lab_2\Web Services\FlickrViewer\obj\Debug\FlickrViewer.csproj.GenerateResource.cache
+C:\Users\samga\Documents\GitHub\CECS-475\Lab_2\Web Services\FlickrViewer\obj\Debug\FlickrViewer.csproj.CoreCompileInputs.cache
+C:\Users\samga\Documents\GitHub\CECS-475\Lab_2\Web Services\FlickrViewer\obj\Debug\FlickrViewer.exe
+C:\Users\samga\Documents\GitHub\CECS-475\Lab_2\Web Services\FlickrViewer\obj\Debug\FlickrViewer.pdb
