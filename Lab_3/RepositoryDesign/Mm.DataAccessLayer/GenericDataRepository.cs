@@ -21,9 +21,7 @@ namespace Mm.DataAccessLayer
                 foreach (Expression<Func<T, object>> navigationProperty in navigationProperties)
                     dbQuery = dbQuery.Include<T, object>(navigationProperty);
 
-                list = dbQuery
-                    .AsNoTracking()
-                    .ToList<T>();
+                list = dbQuery.AsNoTracking().ToList<T>();
             }
             return list;
         }

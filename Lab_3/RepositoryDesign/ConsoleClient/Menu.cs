@@ -18,6 +18,9 @@ namespace ConsoleClient
             Console.WriteLine("[7] update a course");
             Console.WriteLine("[8] remove a course");
             Console.WriteLine("[9] list all courses");
+            Console.WriteLine("[10] add course to teacher");
+            Console.WriteLine("[11] remove course from teacher");
+            Console.WriteLine("[12] reassign course from teacher to teacher");
             Console.WriteLine("[0] exit");
         }
 
