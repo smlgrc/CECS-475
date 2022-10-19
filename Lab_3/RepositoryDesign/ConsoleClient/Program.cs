@@ -96,11 +96,11 @@ namespace ConsoleClient
             //a message to the console window that the teacher has been added
             //to the database.
             Console.WriteLine("Enter a teacher's name: ");
-            string tName = Console.ReadLine();
-            Teacher newt = new Teacher() { TeacherName = tName };
-            newt.EntityState = EntityState.Added;
-            businessLayer.AddTeacher(newt);
-            Console.WriteLine("{0} has been added to the database.", tName);
+            string teachName = Console.ReadLine();
+            Teacher newTeacher = new Teacher() { TeacherName = teachName };
+            newTeacher.EntityState = EntityState.Added;
+            businessLayer.AddTeacher(newTeacher);
+            Console.WriteLine("{0} has been added to the database.", teachName);
         }
 
         /// <summary>
@@ -123,13 +123,14 @@ namespace ConsoleClient
                 //If teacher is null, display a message "Teacher does not exist"
                 //to the database.
                 Console.WriteLine("Enter a teacher's name: ");
-                Teacher teach = businessLayer.GetTeacherByName(Console.ReadLine());
-                if (teach != null)
+                Teacher teacher = businessLayer.GetTeacherByName(Console.ReadLine());
+                if (teacher != null)
                 {
+                    //grab users' input and change teacher name to designated input
                     Console.WriteLine("What do you want to change this teacher's name to: ");
-                    teach.TeacherName = Console.ReadLine();
-                    teach.EntityState = EntityState.Modified;
-                    businessLayer.UpdateTeacher(teach);
+                    teacher.TeacherName = Console.ReadLine();
+                    teacher.EntityState = EntityState.Modified;
+                    businessLayer.UpdateTeacher(teacher);
                 }
                 else
                 {
@@ -139,15 +140,19 @@ namespace ConsoleClient
             //find by a teacher's id
             else if (input == 2)
             {
+                //check to see if input is valid and grab teacher with designated ID
                 int id = Validator.getId();
-                Teacher teach = businessLayer.GetTeacherById(id);
-                if (teach != null)
+                Teacher teacher = businessLayer.GetTeacherById(id);
+                if (teacher != null)
                 {
-                    Console.WriteLine("What do you want to change this teacher's name to: ");
-                    teach.TeacherName = Console.ReadLine();
-                    teach.EntityState = EntityState.Modified;
-                    businessLayer.UpdateTeacher(teach);
+                    Console.WriteLine("Change teacher name to: ");
+                    teacher.TeacherName = Console.ReadLine();
+                    //set EntityState to Modified
+                    teacher.EntityState = EntityState.Modified;
+                    //update the teacher in the database with the businessLayer object
+                    businessLayer.UpdateTeacher(teacher);
                 }
+                //display an error message if the teacher is null
                 else
                 {
                     Console.WriteLine("The teacher does not exist.");
@@ -165,12 +170,13 @@ namespace ConsoleClient
             //YOUR CODE TO REMOVE A TEACHER THE DATABASE
             //Get the teacher. If the teacher object is not null, display the message that
             //the teacher has been removed. Remove the teacher from the database.
-            Teacher teach = businessLayer.GetTeacherById(id);
-            if (teach != null)
+            Teacher teacher = businessLayer.GetTeacherById(id);
+            if (teacher != null)
             {
-                Console.WriteLine("{0} has been removed.", teach.TeacherName);
-                teach.EntityState = EntityState.Deleted;
-                businessLayer.RemoveTeacher(teach);
+                //grab the users input, output a message, and delete the teacher from the database
+                Console.WriteLine(teacher.TeacherName + " has been removed.");
+                teacher.EntityState = EntityState.Deleted;
+                businessLayer.RemoveTeacher(teacher);
             }
             else
             {
@@ -206,18 +212,18 @@ namespace ConsoleClient
             //Else
             //Display a message " No course for the teacher id and name". Display
             //the teacher's id and name
-            Teacher teach = businessLayer.GetTeacherById(id);
-            if (teach != null)
+            Teacher teacher = businessLayer.GetTeacherById(id);
+            if (teacher != null)
             {
-                Console.WriteLine("Listing courses for [ID: {0}, Name: {1}]:", teach.TeacherId, teach.TeacherName);
-                if (teach.Courses.Count > 0)
+                Console.WriteLine("Listing courses for [ID: {0}, Name: {1}]:", teacher.TeacherId, teacher.TeacherName);
+                if (teacher.Courses.Count > 0)
                 {
-                    foreach (Course course in teach.Courses)
+                    foreach (Course course in teacher.Courses)
                         Console.WriteLine("Course ID: {0}, Name: {1}", course.CourseId, course.CourseName);
                 }
                 else
                 {
-                    Console.WriteLine("No courses for [ID: {0}, Name: {1}]:", teach.TeacherId, teach.TeacherName);
+                    Console.WriteLine("No courses for [ID: {0}, Name: {1}]:", teacher.TeacherId, teacher.TeacherName);
                 };
 
             }
@@ -255,6 +261,7 @@ namespace ConsoleClient
                 //Update the teacher by calling a method from the class BusinessLayer
                 //Display a message the course name has been added to the database.
                 //your code
+                //construct an object with the given information and add it to the database with the course and teacherID
                 Course course = new Course()
                 {
                     CourseName = courseName,
@@ -267,7 +274,7 @@ namespace ConsoleClient
                     c.EntityState = EntityState.Unchanged;
                 teacher.Courses.Add(course);
                 businessLayer.UpdateTeacher(teacher);
-                Console.WriteLine("{0} has been added to the database.", courseName);
+                Console.WriteLine(courseName + " has been added to the database.");
             }
             else
             {
@@ -341,7 +348,7 @@ namespace ConsoleClient
             {   //Display the message the course name has been removed
                 //Remove the course
                 //Your code
-                Console.WriteLine("{0} has been removed.", course.CourseName);
+                Console.WriteLine(course.CourseName + " has been removed.");
                 course.EntityState = EntityState.Deleted;
                 businessLayer.RemoveCourse(course);
             }
